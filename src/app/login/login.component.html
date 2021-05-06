@@ -1,0 +1,31 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale-1.0">
+        <title>ShopCart</title>
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        
+    </head>
+    <body>
+        <!-- <div id="heading"><h1>Shop Cart</h1></div> -->
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="container" id="container">
+
+            <div class="form-group">
+                <input type="text" class="form-control" formControlName="email" id="email" placeholder="Enter Email">
+                <div *ngIf="(this.loginForm.get('email')?.touched||this.loginForm.get('email')?.dirty)&&this.loginForm.get('email')?.errors" class="error">Invalid Email</div>
+             </div>
+            
+             <div class="form-group">
+                <input type="password" class="form-control" formControlName="password"  id="password" placeholder="Enter password">
+                <div *ngIf="(this.loginForm.get('password')?.touched||this.loginForm.get('password')?.dirty)&&this.loginForm.get('password')?.errors" class="error">Invalid Password</div>
+             </div>
+
+             <button type="submit" class="btn btn-primary btn-lg btn-block" id="sbutton">Login</button>
+             <br>
+             <a routerLink="register" style="margin-left: 177px;">Registration</a>
+        </div>
+    </form>
+    </body>
+</html>

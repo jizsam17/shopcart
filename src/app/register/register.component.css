@@ -1,0 +1,21 @@
+.container{
+    margin-top: 6%;
+    width: 500px;
+    border: 2px solid black;
+    height: 270px;
+}
+
+.form-group{
+    margin-top: 15px;
+    margin-left: 45px;
+    width: 360px;
+}
+.errors{
+    color: red;
+}
+
+#sbutton{
+    margin-top: 15px;
+    margin-left: 105px;
+    width: 260px;
+}
